@@ -16,14 +16,7 @@ import { JsonPipe } from '@angular/common/src/pipes/json_pipe';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
-    BrowserDomAdapter,
-    BrowserJsonp,
-    JsonpModule,
-    JsonPipe,
-    Animation,
-    AnimationEffect,
-    AnimationEvent,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
