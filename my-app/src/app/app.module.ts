@@ -1,9 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { BrowserDomAdapter } from '@angular/platform-browser/src/browser/browser_adapter';
+import { BrowserJsonp } from '@angular/http/src/backends/browser_jsonp';
+import { GenericBrowserDomAdapter } from '@angular/platform-browser/src/browser/generic_browser_adapter';
+import { JsonPipe } from '@angular/common/src/pipes/json_pipe';
 
 @NgModule({
   declarations: [
@@ -12,7 +16,14 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    BrowserDomAdapter,
+    BrowserJsonp,
+    JsonpModule,
+    JsonPipe,
+    Animation,
+    AnimationEffect,
+    AnimationEvent,
   ],
   providers: [],
   bootstrap: [AppComponent]
