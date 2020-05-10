@@ -1,9 +1,12 @@
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <h1>
   {{title}}
 </h1>
 
 <input type="text" #newTodo />
+<input type="number" id="prio"/>
 <button (click)="addTodo(newTodo.value); newTodo.value=''">Add</button>
+
 
 <table>
   <tr>
@@ -18,6 +21,9 @@
     <td>{{todo.done ? '&#10003;' : '&#10005;'}}</td>
     <td>
       <button (click)="deleteTodo(todo)">delete</button>
+    </td>
+    <td>
+      <button (click)="changeDone(todo)">done</button>
     </td>
   </tr>
 

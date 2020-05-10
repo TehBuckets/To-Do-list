@@ -8,7 +8,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'My To-do list';
   todos = [
-    { 
+              //These are pre made to do lists in order to test.
+    /*{ 
       label: 'Bring Milk', 
       done: true, 
       priority: 3
@@ -27,9 +28,10 @@ export class AppComponent {
       label: 'Clean House', 
       done: false, 
       priority: 4
-    }
+    }*/
   ];
 
+  //Adds a todo
   addTodo(newTodoLabel){
     var newTodo = {
       label: newTodoLabel,
@@ -39,7 +41,20 @@ export class AppComponent {
     this.todos.push(newTodo);
   }
 
+  //Deletes a todo
   deleteTodo(todo){
-    this.todos = this.todos.filter( t => t.label !== todo.label);
+    this.todos = this.todos.filter( t => t.label !== todo.label );
+  }
+
+  //Changes the state of the todo, from done to undone and vice versa
+  changeDone(todo){
+    var done = false;
+    if(done){
+      this.todos = this.todos.filter( t => t.done = false )
+      done = true;
+    }else{
+      this.todos = this.todos.filter( t => t.done = true )
+      done = false;
+   }
   }
 }
