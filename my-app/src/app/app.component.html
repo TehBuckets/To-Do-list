@@ -4,7 +4,6 @@
 </h1>
 
 <input type="text" #newTodo />
-<input type="number" id="prio"/>
 <button (click)="addTodo(newTodo.value); newTodo.value=''">Add</button>
 
 
@@ -24,6 +23,12 @@
     </td>
     <td>
       <button (click)="changeDone(todo)">done</button>
+    </td>
+    <td>
+      <button (click)="changePrioplus(todo)">+1 prio</button>
+    </td>
+    <td>
+      <button (click)="changePriominus(todo)">-1 prio</button>
     </td>
   </tr>
 

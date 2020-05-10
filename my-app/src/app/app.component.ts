@@ -57,4 +57,14 @@ export class AppComponent {
       done = false;
    }
   }
+
+  //Adds 1 value to priority
+  changePrioplus(todo){
+    this.todos = this.todos.filter( t => t.priority++ )
+  }
+
+  //Takes 1 value away from priority
+  changePriominus(todo){
+    this.todos = this.todos.filter( t => t.priority-- )
+  }
 }
